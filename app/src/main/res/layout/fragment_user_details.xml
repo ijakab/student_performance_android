@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.userSingle.UserDetailsFragment"
+    android:animateLayoutChanges="true">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_regular"
+        app:cpb_background_progressbar_color="#55009688"
+        app:cpb_background_progressbar_width="12dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="@color/colorPrimaryDark"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:cpb_progressbar_width="12dp"
+        app:cpb_round_border="true"
+        app:cpb_progress_max="100"
+        app:layout_constraintTop_toBottomOf="@id/textViewPerformanceTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_regular" />
+
+    <TextView
+        android:id="@+id/textViewUsernameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/username_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/margin_regular"/>
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textViewUsernameTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Pero Peric"
+        android:layout_marginStart="@dimen/margin_regular"
+        android:layout_marginTop="@dimen/margin_small" />
+
+    <TextView
+        android:id="@+id/textViewEmailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/email_title"
+        app:layout_constraintTop_toBottomOf="@id/textViewUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/margin_regular"/>
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_regular"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawableEnd="@drawable/ic_email"
+        android:drawablePadding="@dimen/margin_small"
+        android:drawableTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmailTitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="peroperic@gmail.com" />
+
+    <TextView
+        android:id="@+id/textViewRegistrationDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/registration_date"
+        app:layout_constraintTop_toBottomOf="@id/circularProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margin_regular"/>
+
+    <TextView
+        android:id="@+id/textViewRegistrationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewRegistrationDateTitle"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="16. February 2020" />
+
+    <TextView
+        android:id="@+id/textViewPerformanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:text="@string/predicted_performance"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/margin_regular"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonBack"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_regular"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

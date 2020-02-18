@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_group_main"
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/userListFragment"
+            android:icon="@drawable/ic_users"
+            android:title="@string/user_list"/>
+
+    </group>
+
+    <group
+        android:id="@+id/menu_group_secondary"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/loginFragment"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/log_out"/>
+
+    </group>
+
+</menu>
